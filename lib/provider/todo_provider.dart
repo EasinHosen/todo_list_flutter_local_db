@@ -17,7 +17,6 @@ class TodoProvider extends ChangeNotifier {
         todoOwner = value!;
         // print(todoOwner);
       });
-      // print('Get all todo called');
       getTodoByOwner();
       notifyListeners();
     });
@@ -105,11 +104,6 @@ class TodoProvider extends ChangeNotifier {
     });
   }
 
-  // updateIsDue() {
-  //   DBTodo.updateIsDue(DateTime.now());
-  //   notifyListeners();
-  // }
-
   void deleteTodo(int? todoId) async {
     final rowId = await DBTodo.deleteTodo(todoId!);
 
@@ -126,11 +120,4 @@ class TodoProvider extends ChangeNotifier {
       notifyListeners();
     });
   }
-
-  // initializeNotification() {
-  //   Workmanager().initialize(callbackDispatcher, isInDebugMode: false);
-  //   Workmanager().registerOneOffTask('Task identifier', 'taskName',
-  //       initialDelay: Duration(seconds: 5));
-  // }
-
 }

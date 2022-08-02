@@ -32,6 +32,6 @@ Future<void> _showNotification(String title, String time) async {
   const NotificationDetails platformChannelSpecifics =
       NotificationDetails(android: androidNotificationDetailsChannelSpecific);
   await flutterLocalNotificationsPlugin.show(
-      0, 'Up next $title', 'At $time', platformChannelSpecifics,
+      0, 'Up next "$title"', 'At $time', platformChannelSpecifics,
       payload: 'item payload');
 }

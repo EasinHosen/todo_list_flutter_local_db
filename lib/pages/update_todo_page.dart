@@ -38,7 +38,7 @@ class _UpdateTodoPageState extends State<UpdateTodoPage> {
   void initState() {
     getUser().then((value) {
       userName = value;
-      // print('user: $userName');
+      print('user: $userName');
     });
     titleController = TextEditingController();
     descriptionController = TextEditingController();

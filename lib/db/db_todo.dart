@@ -125,7 +125,7 @@ class DBTodo {
   static Future<int> updateIsCompletedField(
       String owner, int todoId, int value) async {
     final db = await open();
-    print('db: $owner , $value');
+    // print('db: $owner , $value');
 
     return db.update(tableTodo, {tableTodoIsCompleted: value},
         where: '$tableTodoOwner = ? and $tableTodoId = ?',

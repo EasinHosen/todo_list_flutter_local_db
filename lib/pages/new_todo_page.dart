@@ -243,7 +243,7 @@ class _NewTodoState extends State<NewTodo> {
           var dateTime =
               DateFormat('dd/MM/yyyy hh:mm aaa').parse('$_date $time');
 
-          var difference = dateTime.difference(DateTime.now()).inSeconds;
+          var difference = dateTime.difference(DateTime.now()).inSeconds - 300;
           // print('diff- $difference');
 
           NotificationManager()
