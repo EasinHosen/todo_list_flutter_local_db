@@ -50,12 +50,12 @@ class TodoProvider extends ChangeNotifier {
     switch (index) {
       case 0:
         {
-          getTodoByOwner();
+          getTodoOfThisDay();
           break;
         }
       case 1:
         {
-          getTodoOfThisDay();
+          getTodoByOwner();
           break;
         }
       case 2:

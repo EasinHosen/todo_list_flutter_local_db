@@ -198,10 +198,10 @@ class _HomePageState extends State<HomePage> {
               _selectedIndex = value;
               provider.loadContent(_selectedIndex);
               if (value == 0) {
-                _display = 'Nothing to do!';
+                _display = 'Nothing to do today!';
               }
               if (value == 1) {
-                _display = 'Nothing to do today!';
+                _display = 'Nothing to do!';
               }
               if (value == 2) {
                 _display = 'Nothing is overdue!';
@@ -216,14 +216,14 @@ class _HomePageState extends State<HomePage> {
             type: BottomNavigationBarType.fixed,
             items: const [
               BottomNavigationBarItem(
+                icon: Icon(Icons.today),
+                label: 'Today',
+              ),
+              BottomNavigationBarItem(
                 icon: Icon(
                   Icons.work,
                 ),
                 label: 'All',
-              ),
-              BottomNavigationBarItem(
-                icon: Icon(Icons.today),
-                label: 'Today',
               ),
               BottomNavigationBarItem(
                 icon: Icon(Icons.timer),
